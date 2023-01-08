@@ -189,3 +189,22 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// Contact form
+document.querySelector('button').addEventListener('click', (e)=>{
+    e.preventDefault();
+    const contactForm = document.querySelector('#form');
+    const name = document.querySelector('[name="name"]');
+    const email = document.querySelector('[name="email"]');
+    const project = document.querySelector('[name="project"]');
+    const message = document.querySelector('[name="message"]');
+    // validation before sending the data
+    if(name.value.length===0 || name.value.length===0 || name.value.length===0){
+      alert('Please, fill the inputs!')
+    }else{
+      let data = new FormData(contactForm);  
+      fetch("https://formbold.com/s/35KB7", { method: "POST", body: data });
+      alert('Thank you!! Your form was submited');
+      contactForm.reset()
+    }
+  })

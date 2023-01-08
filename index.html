@@ -844,33 +844,35 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form grid">
+                <form id="form" action="https://formbold.com/s/35KB7" method="POST" class="contact_form grid">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
-                            <lable class="contact_label">Name</lable>
-                            <input type="text" class="contact_input">
+                            <lable for="" class="contact_label">Name</lable>
+                            <input type="text" name="name" class="contact_input" placeholder="Your Full Name" required>
                         </div>
 
                         <div class="contact_content">
-                            <lable class="contact_label">Email</lable>
-                            <input type="email" class="contact_input">
+                            <lable for="" class="contact_label">Email</lable>
+                            <input type="email" name="email" class="contact_input" placeholder="Your Email" required>
                         </div>
 
                         <div class="contact_content">
-                            <lable class="contact_label">Project</lable>
-                            <input type="text" class="contact_input">
+                            <lable for="" class="contact_label">Project</lable>
+                            <input type="text" name="project" class="contact_input"placeholder="Your project" required>
                         </div>
 
                         <div class="contact_content">
-                            <lable class="contact_label">Message</lable>
-                            <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                            <lable for="content" class="contact_label">Message</lable>
+                            <textarea name="message" placeholder="Your message" required id="" cols="0" rows="7" class="contact_input"></textarea>
                         </div>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
-                            Send Message
+                        <a href="">
+                            <button class="button button--flex contact_button" type="submit">
+                                Send Message
                             <i class="uil uil-message button_icon"></i>
+                            </button>
                         </a>
                     </div>
                 </form>
